@@ -143,4 +143,45 @@ Before you submit your solution, you need to save your progress with git.
   * Click on + Create Submission. Connect your repository for this lab.
   * For additional information on submitting assignments in CodeGrade: [Getting Started in Canvas](https://help.codegrade.com/for-students/getting-started/getting-started-in-canvas)
 
+## Implementation & Usage
+
+This repository includes a working implementation of the `Song` class used for the Music Library System lab.
+
+- Location: `lib/song.py`
+- Key features:
+  - Tracks total number of `Song` instances via `Song.count`.
+  - Maintains unique lists of genres (`Song.genres`) and artists (`Song.artists`).
+  - Counts how many songs belong to each genre (`Song.genre_count`) and artist (`Song.artist_count`).
+
+Example usage in a Python REPL or script:
+
+```python
+from song import Song
+
+Song.count = 0
+Song.genre_count = {}
+Song.artist_count = {}
+
+Song("99 Problems", "Jay Z", "Rap")
+Song("Halo", "Beyonce", "Pop")
+Song("Smells Like Teen Spirit", "Nirvana", "Rock")
+
+print(Song.count)           # 3
+print(Song.genres)          # ['Rap', 'Pop', 'Rock']
+print(Song.genre_count)     # {'Rap': 1, 'Pop': 1, 'Rock': 1}
+print(Song.artist_count)    # {'Jay Z': 1, 'Beyonce': 1, 'Nirvana': 1}
+```
+
+Run the test suite:
+
+```bash
+pytest -q
+```
+
+Pull Request URL for this feature branch (created):
+
+https://github.com/jeremymwaura-hub/python-music-library-system-lab/pull/new/feature/song-class
+
+If you'd like, I can add a short screenshot of the test run and a usage demo GIF — tell me if you want me to create one and where to save it.
+
 
